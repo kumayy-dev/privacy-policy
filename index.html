@@ -3,50 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プライバシー ポリシー - FileDateStamper</title>
+  <title>プライバシー ポリシー - kumayy-dev</title>
   <style>
+    :root {
+      --text-color: #24292f;
+      --bg-color: #ffffff;
+      --border-color: #d0d7de;
+      --accent-color: #0969da;
+      --card-bg: #f6f8fa;
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+      line-height: 1.7;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    h1 { border-bottom: 2px solid #eaecef; padding-bottom: 0.3em; }
-    h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; margin-top: 24px; }
-    h3 { margin-top: 16px; }
-    ul { padding-left: 20px; }
+    h1 { border-bottom: 2px solid var(--border-color); padding-bottom: 0.3em; font-size: 1.8rem; }
+    h2 { border-bottom: 1px solid var(--border-color); padding-bottom: 0.3em; margin-top: 2rem; font-size: 1.4rem; }
+    h3 { margin-top: 1.5rem; font-size: 1.15rem; }
+    ul { padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    .app-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 20px;
+    }
+    .app-card:target {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.3);
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 12px;
+      background-color: #dafbe1;
+      color: #1a7f37;
+      margin-left: 8px;
+    }
   </style>
 </head>
 <body>
 
-  <h1>プライバシー ポリシー</h1>
+  <h1>プライバシー ポリシー（アプリケーション共通）</h1>
   <p>最終更新日: 2026年11月5日</p>
 
-  <p>kumayy-dev（以下、「当方」）は、Windows アプリ「FileDateStamper」（以下、「本アプリ」）における利用者のプライバシーの保護を重視し、本プライバシー ポリシーを定めます。</p>
+  <p>開発者「kumayy-dev」（以下、「当方」）は、提供する Windows アプリケーション（以下、「本各アプリ」）における利用者のプライバシーの保護を重視し、以下の通りプライバシー ポリシーを定めます。</p>
 
-  <h2>1. 収集する情報とその利用目的</h2>
-  <h3>個人を特定できる情報の収集について</h3>
-  <p>本アプリは、利用者の氏名、住所、電話番号、メールアドレス、クレジットカード番号などの個人を特定できる情報を収集、保存、または外部サーバーに送信することはありません。</p>
+  <h2>第1条（基本方針）</h2>
+  <p>当方は、利用者のプライバシーを尊重し、個人を特定できる情報（氏名、住所、電話番号、メールアドレス等）を不必要に収集・保存・利用いたしません。</p>
 
-  <h3>ファイルおよびデータの取り扱いについて</h3>
-  <p>本アプリが処理するファイル（タイムスタンプの変更対象ファイル等）は、すべて利用者のローカルデバイス内でのみ処理されます。これらのファイルの内容やメタデータが外部に送信されることはありません。</p>
+  <h2>第2条（個別アプリケーションにおけるデータ取り扱い）</h2>
+  <p>本各アプリにおける個別具体的なデータの取り扱いは、以下の各項に定めるとおりです。</p>
 
-  <h3>ネットワーク接続について</h3>
-  <p>本アプリは、完全にオフラインで動作し、インターネット通信を行いません。</p>
+  <!-- アプリ 1: FileDateStamper -->
+  <section id="filedatestamper" class="app-card">
+    <h3>1. FileDateStamper <span class="badge">完全ローカル動作</span></h3>
+    <ul>
+      <li><strong>個人情報の収集:</strong> 一切行いません。</li>
+      <li><strong>ファイルアクセスの範囲:</strong> タイムスタンプ変更等の目的で利用者が明示的に指定したファイルおよびフォルダのみにアクセスします。</li>
+      <li><strong>データの保存・外部送信:</strong> 読み込んだデータおよびメタデータがデバイス外部へ送信されることはありません。すべての処理はローカル環境内で完結します。</li>
+      <li><strong>ネットワーク通信:</strong> 本アプリはネットワーク通信機能を一切含みません。</li>
+    </ul>
+  </section>
 
-  <h2>2. 第三者への開示・提供</h2>
-  <p>当方は、法令に基づく開示請求がある場合を除き、利用者の情報を第三者に提供・共有することはありません。</p>
+  <!-- 今後追加するアプリのひな形（例） -->
+  <section id="sample-app" class="app-card" style="opacity: 0.7;">
+    <h3>2. [新規アプリ名]（※今後追加時の雛形）</h3>
+    <ul>
+      <li><strong>個人情報の収集:</strong> [収集の有無を記載]</li>
+      <li><strong>外部通信:</strong> [通信の有無、利用する外部APIやサービス名を記載]</li>
+      <li><strong>利用目的:</strong> [機能提供に必要な理由を記載]</li>
+    </ul>
+  </section>
 
-  <h2>3. 免責事項</h2>
-  <p>利用者が本アプリを利用したことによって生じた損害や不利益について、当方は法令上認められる限度において一切の責任を負いかねます。重要なデータを取り扱う際は、事前にバックアップを取得した上でご利用ください。</p>
+  <h2>第3条（第三者提供の制限）</h2>
+  <p>当方は、以下の場合を除き、利用者の情報を第三者に提供・開示することはありません。</p>
+  <ul>
+    <li>法令に基づき裁判所、警察等の公的機関から要請を受けた場合</li>
+    <li>利用者の生命、身体または財産の保護のために必要があり、本人の同意を得ることが困難である場合</li>
+  </ul>
 
-  <h2>4. プライバシー ポリシーの変更</h2>
-  <p>当方は、法令の改正や本アプリの機能変更に伴い、本ポリシーを予告なく変更することがあります。変更後のプライバシー ポリシーは、本ページに掲載された時点で効力を生じるものとします。</p>
+  <h2>第4条（免責事項）</h2>
+  <p>利用者が本各アプリを利用したことによって生じた不具合、損害、データの消失等について、当方は法令上認められる限度において一切の責任を負いかねます。重要なデータを取り扱う際は、必ず事前にバックアップを実施した上でご利用ください。</p>
 
-  <h2>5. お問い合わせ</h2>
-  <p>本ポリシーまたは本アプリに関するお問い合わせは、以下の窓口までお願いいたします。</p>
+  <h2>第5条（改定手続き）</h2>
+  <p>当方は、法令の改定や新規アプリの公開、機能の変更等に伴い、本ポリシーを予告なく変更することがあります。変更後のポリシーは、本ページに掲載された時点で効力を生じるものとします。</p>
+
+  <h2>第6条（お問い合わせ窓口）</h2>
+  <p>本ポリシーまたは提供アプリに関するご意見、ご質問は以下よりお問い合わせください。</p>
   <ul>
     <li>開発者: kumayy-dev</li>
     <li>連絡先: contact@g.kumayy.com</li>
